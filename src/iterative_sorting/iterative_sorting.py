@@ -20,10 +20,16 @@ def selection_sort( arr ):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
-  
+    for i in range(0, len(arr)):
+      cur_index = i
+      smallest_index = cur_index
+
+      for j in range(cur_index, len(arr)-1):
+        if arr[i]>arr[j+1]:
+            arr[i],arr[j+1] = arr[j+1], arr[i]
    
 
-  return arr
+    return arr
 
 
 # STRETCH: implement the Count Sort function below
