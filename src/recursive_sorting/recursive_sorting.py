@@ -6,16 +6,31 @@ def merge( arrA, arrB ):
     # TO-DO
     #set merged array to empty list
     merged_arr = []
+    i, j = 0, 0
    
     #check which array should come first
-    while len(arrA) and len(arrB) != 0:  
-      if arrA[0] > arrB[0]:
-        merged_arr.append(arrA)
-      else:
-        merged_arr.append(arrB)
+    while len(arrA) and len(arrB) != 0 and len(merged_arr) < elements :  
+    
 
+      if arrA[i] < arrB[j]:
+        merged_arr.append(arrA[i]) 
+        i += 1
+      else:
+        merged_arr.append(arrB[j])
+        i += 1
+
+      # if j == len(arrB):
+      #   merged_arr += arrA[i:]
+      #   break
+      # elif i == len(arrA):
+      #   merged_arr += arrB[j:]
 
     return merged_arr
+
+# c= []
+# a = [2, 3, 4, 5]
+# b= [6, 7, 8, 9, 10, 11, 12]
+
 
 
 # TO-DO: implement the Merge Sort function below USING RECURSION
